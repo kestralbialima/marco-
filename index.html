@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marco Alcaraz - Assessoria e Consultoria Jurídica</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .hero-section {
+            position: relative;
+            background-image: url('img/fundo.png');
+            background-size: cover;
+            background-position: center;
+            color: white;
+        }
+
+        /* Comando para a sobreposição, ainda mais escura para máxima legibilidade */
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            /* Cobre toda a seção */
+            background-color: rgba(17, 24, 39, 0.8);
+            /* Opacidade aumentada para 80% */
+            z-index: 1;
+        }
+
+        /* Sombra para a logo na seção inicial, agora mais forte */
+        #inicio img {
+            filter: drop-shadow(2px 2px 6px rgba(0, 0, 0, 0.8));
+        }
+
+        /* Sombra para o texto na seção inicial para maior legibilidade */
+        .hero-section h1,
+        .hero-section p {
+            text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.8);
+        }
+
+        .logo-svg-white {
+            filter: brightness(0) invert(1);
+        }
+    </style>
+</head>
+
+<body class="bg-white text-gray-800">
+
+    <!-- Cabeçalho e Navegação -->
+    <header class="bg-white/80 backdrop-blur-md sticky top-0 z-50 shadow-sm">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#inicio" class="flex items-center space-x-3">
+                <img src="img/logob.png" alt="Logo Marco Alcaraz" class="h-10">
+                <span class="text-xl font-bold tracking-tight text-gray-800">Marco Alcaraz</span>
+            </a>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#sobre" class="text-gray-600 hover:text-gray-900 transition-colors">Sobre</a>
+                <a href="#areas" class="text-gray-600 hover:text-gray-900 transition-colors">Áreas de Atuação</a>
+                <a href="#contato" class="text-gray-600 hover:text-gray-900 transition-colors">Contato</a>
+            </nav>
+            <div class="md:hidden">
+                <button id="menu-button" class="text-gray-800 focus:outline-none">
+                    <i data-lucide="menu"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Menu Mobile -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4 flex flex-col space-y-3">
+            <a href="#sobre" class="text-gray-600 hover:text-gray-900 transition-colors py-2">Sobre</a>
+            <a href="#areas" class="text-gray-600 hover:text-gray-900 transition-colors py-2">Áreas de Atuação</a>
+            <a href="#contato" class="text-gray-600 hover:text-gray-900 transition-colors py-2">Contato</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Seção Inicial (Hero) -->
+        <section id="inicio" class="hero-section">
+            <!-- Este container tem z-index: 10 (via 'z-10'), ficando na frente da sobreposição (z-index: 1) -->
+            <div class="relative z-10 container mx-auto px-6 py-24 md:py-32 text-center">
+                <img src="img/logom.png" alt="Logo Marco Alcaraz Branco" class="h-20 mx-auto mb-6">
+                <h1 class="text-4xl md:text-6xl font-extrabold text-white leading-tight mb-4">Marco Alcaraz assessoria
+                    jurídica</h1>
+                <p class="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto mb-8 font-medium">Atuação estratégica e
+                    personalizada na defesa dos seus direitos individuais, patrimoniais e empresariais.</p>
+                <a href="#contato"
+                    class="bg-white text-gray-900 font-bold py-3 px-8 rounded-lg hover:bg-gray-200 transition-transform transform hover:scale-105 inline-block">Fale
+                    com um Especialista</a>
+            </div>
+        </section>
+
+        <!-- O restante do código permanece o mesmo... -->
+        <!-- Seção Sobre -->
+        <section id="sobre" class="py-20 bg-gray-50">
+            <div class="container mx-auto px-6">
+                <div class="flex flex-col md:flex-row items-center gap-12">
+                    <div class="md-w-1/3">
+                        <div class="bg-gray-200 rounded-lg shadow-lg p-2">
+                            <img src="img/Marco.jpeg" alt="Foto de Marco Alcaraz" class="rounded-lg w-full">
+                        </div>
+                    </div>
+                    <div class="md-w-2/3">
+                        <h2 class="text-3xl font-bold text-gray-800 mb-4">Dr. Marco Aurélio C. Alcaraz de Souza</h2>
+                        <p class="text-gray-500 font-semibold mb-6">OAB/PR 95.841</p>
+                        <p class="text-gray-600 mb-4 leading-relaxed">Atuo de forma estratégica e personalizada nas
+                            principais áreas do Direito, com foco na defesa dos direitos individuais, patrimoniais e
+                            empresariais, aliando técnica jurídica, experiência prática e compromisso ético.</p>
+                        <p class="text-gray-600 mb-4 leading-relaxed">Minha trajetória profissional iniciou com uma
+                            imersão de dois anos no programa "Justiça no Bairro", onde atuei diretamente com Direito de
+                            Família, mediando conflitos e buscando soluções consensuais em audiências. Essa experiência
+                            foi fundamental para desenvolver uma advocacia mais humana, sensível e focada em resultados
+                            equilibrados.</p>
+                        <div class="border-l-4 border-gray-800 pl-4 mt-6">
+                            <p class="text-gray-700 italic">"Compromisso em aliar técnica jurídica, experiência prática
+                                e uma abordagem humana para garantir a melhor defesa dos seus interesses."</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Áreas de Atuação -->
+        <section id="areas" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Áreas de Atuação</h2>
+                    <p class="text-gray-600 mt-4 max-w-2xl mx-auto">Soluções jurídicas especializadas para cada uma de
+                        suas necessidades.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Card 1: Direito de Família -->
+                    <div
+                        class="bg-gray-50 p-8 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-black">
+                        <div
+                            class="flex items-center justify-center bg-gray-800 text-white w-12 h-12 rounded-full mb-5">
+                            <i data-lucide="users-2"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Direito de Família</h3>
+                        <p class="text-gray-600 leading-relaxed">Atuação sensível e técnica em guarda, visitas,
+                            alimentos, dissolução de união estável e casamento, focando sempre no melhor interesse da
+                            criança e em decisões equilibradas.</p>
+                    </div>
+
+                    <!-- Card 2: Direito Condominial e Imobiliário -->
+                    <div
+                        class="bg-gray-50 p-8 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-black">
+                        <div
+                            class="flex items-center justify-center bg-gray-800 text-white w-12 h-12 rounded-full mb-5">
+                            <i data-lucide="building-2"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Direito Condominial e Imobiliário</h3>
+                        <p class="text-gray-600 leading-relaxed">Assessoria completa para condomínios e administradoras,
+                            incluindo atas, notificações, cobranças, contratos, e resolução de conflitos de vizinhança e
+                            inadimplência.</p>
+                    </div>
+
+                    <!-- Card 3: Direito Civil e do Consumidor -->
+                    <div
+                        class="bg-gray-50 p-8 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-black">
+                        <div
+                            class="flex items-center justify-center bg-gray-800 text-white w-12 h-12 rounded-full mb-5">
+                            <i data-lucide="scale"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Direito Civil e do Consumidor</h3>
+                        <p class="text-gray-600 leading-relaxed">Atuação firme em ações de indenização, cobranças
+                            abusivas, execuções e revisões contratuais, defendendo consumidores e empresas com base na
+                            boa-fé e equilíbrio contratual.</p>
+                    </div>
+
+                    <!-- Card 4: Direito de Trânsito e Administrativo -->
+                    <div
+                        class="bg-gray-50 p-8 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-black">
+                        <div
+                            class="flex items-center justify-center bg-gray-800 text-white w-12 h-12 rounded-full mb-5">
+                            <i data-lucide="car"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Direito de Trânsito e Administrativo</h3>
+                        <p class="text-gray-600 leading-relaxed">Elaboração de defesas e recursos em infrações (art. 165
+                            CTB), processos de suspensão da CNH e restituição de veículos, com estratégia processual e
+                            fundamentação técnica.</p>
+                    </div>
+
+                    <!-- Card 5: Direito Empresarial e Contratual -->
+                    <div
+                        class="bg-gray-50 p-8 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-black">
+                        <div
+                            class="flex items-center justify-center bg-gray-800 text-white w-12 h-12 rounded-full mb-5">
+                            <i data-lucide="briefcase"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Direito Empresarial e Contratual</h3>
+                        <p class="text-gray-600 leading-relaxed">Consultoria para empresas com elaboração de contratos
+                            comerciais, parceria, representação e confidencialidade, garantindo segurança jurídica nas
+                            relações empresariais.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Contato -->
+        <section id="contato" class="py-20 bg-gray-900 text-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold">Entre em Contato</h2>
+                    <p class="text-gray-400 mt-4 max-w-2xl mx-auto">Vamos conversar sobre o seu caso. Envie uma mensagem
+                        ou visite nosso escritório.</p>
+                </div>
+                <div class="flex flex-col lg:flex-row gap-10">
+                    <!-- Informações de Contato -->
+                    <div class="lg:w-1/2 bg-gray-800 p-8 rounded-lg">
+                        <h3 class="text-2xl font-bold mb-6">Informações</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-start space-x-4">
+                                <i data-lucide="map-pin" class="mt-1 text-gray-400"></i>
+                                <div>
+                                    <h4 class="font-semibold">Endereço</h4>
+                                    <p class="text-gray-300">R. Amintas de Barros, 144 - Centro<br>Curitiba - PR, Brasil
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-4">
+                                <i data-lucide="mail" class="mt-1 text-gray-400"></i>
+                                <div>
+                                    <h4 class="font-semibold">Email</h4>
+                                    <a href="mailto:contato@marcoalcaraz.adv.br"
+                                        class="text-gray-300 hover:text-white">contato@marcoalcaraz.adv.br</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-8 pt-8 border-t border-gray-700 flex space-x-6">
+                            <a href="https://wa.me/5541985249988" target="_blank"
+                                class="flex-1 text-center bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-lg transition-colors flex items-center justify-center space-x-2">
+                                <i data-lucide="message-circle"></i>
+                                <span>WhatsApp</span>
+                            </a>
+                            <a href="https://www.instagram.com/marcoalcaraz.adv/" target="_blank"
+                                class="flex-1 text-center bg-pink-600 hover:bg-pink-700 text-white font-bold py-3 px-6 rounded-lg transition-colors flex items-center justify-center space-x-2">
+                                <i data-lucide="instagram"></i>
+                                <span>Instagram</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Mapa -->
+                    <div class="lg:w-1/2 h-80 lg:h-auto rounded-lg overflow-hidden">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3603.2104523788756!2d-49.26622868550731!3d-25.43135098378829!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94dce46b1a3e655b%3A0x88dbf2536b3e70d4!2sR.%20Amintas%20de%20Barros%2C%20144%20-%20Centro%2C%20Curitiba%20-%20PR%2C%2080060-205!5e0!3m2!1spt-BR!2sbr!4v1665171781254!5m2!1spt-BR!2sbr"
+                            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="bg-black text-gray-400">
+        <div class="container mx-auto px-6 py-8 text-center">
+            <!-- Usando URL da imagem que funciona online -->
+            <img src="img/logo.png" alt="Logo Marco Alcaraz Branco" class="h-12 mx-auto mb-4">
+            <p>&copy; 2025 Marco Alcaraz Advocacia. Todos os direitos reservados.</p>
+            <p class="text-sm mt-2">Desenvolvido com excelência para uma advocacia de resultados.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Lógica para ícones Lucide
+        lucide.createIcons();
+
+        // Lógica para menu mobile
+        const menuButton = document.getElementById('menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Lógica para fechar menu ao clicar no link (opcional)
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+    </script>
+</body>
+
+</html>
